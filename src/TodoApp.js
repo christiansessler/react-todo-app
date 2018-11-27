@@ -66,6 +66,12 @@ class TodoApp extends React.Component {
   }
 
   render() {
+    if (this.state.items && this.state.items.length > 0) {
+      document.title = '(' + this.state.items.length + ") Todo's";
+    } else {
+      document.title = "Todo's";
+    }
+
     return (
       <div className="container">
         <h1>Todo's</h1>
